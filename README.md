@@ -91,3 +91,33 @@ HTML / CSS / JavaScript Frontend dashboard
 YAML + JSON Application settings and sample data
 Git + GitHub Version control and public portfolio repository
 Render Cloud web-service hosting
+
+# Testing Checklist:
+
+• n Application starts locally without errors.
+• n Dashboard loads on desktop and mobile widths.
+• n /health returns a successful response.
+• n Valid IPv4, domain, and hash inputs are handled as expected.
+• n Malformed or missing input returns a clear 4xx response.
+• n Known sample indicators return the expected demo classification.
+• n Unknown indicators are not incorrectly described as confirmed safe.
+• n No API keys or secrets are committed to GitHub.
+• n Render build and startup logs show no errors.
+• n Public Render URL and README instructions match the deployed version.
+
+# Security and Responsible Use:
+    
+• Treat all external indicator values as untrusted input and validate length and format.
+• Do not automatically download, execute, or open suspicious files or URLs.
+• Do not perform scanning, exploitation, or blocking actions as part of this lookup dashboard.
+• If external intelligence APIs are added, store credentials in environment variables and handle provider errors and
+rate limits.
+• Use HTTPS in production and consider authentication, request throttling, logging, and dependency updates
+before handling sensitive data.
+
+# Conclusion:
+
+Sentinova Threat Lens is a practical portfolio project for demonstrating Python API development, input validation,
+threat-indicator handling, dashboard design, GitHub workflow, and cloud deployment. Start with predictable local
+demo data, test each endpoint, document limitations honestly, and add live intelligence integrations only when they
+are explicitly configured and secured.
