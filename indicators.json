@@ -1,0 +1,86 @@
+[
+  {
+    "id": "IOC-2025-001",
+    "value": "198.51.100.23",
+    "type": "ip",
+    "risk": "High",
+    "confidence": 94,
+    "category": "Credential phishing",
+    "first_seen": "2025-10-18",
+    "last_seen": "2025-10-24",
+    "summary": "Reserved documentation-range address used here as a fictional phishing example.",
+    "tags": ["phishing", "credential theft"]
+  },
+  {
+    "id": "IOC-2025-002",
+    "value": "203.0.113.42",
+    "type": "ip",
+    "risk": "Medium",
+    "confidence": 76,
+    "category": "Suspicious scanning",
+    "first_seen": "2025-10-20",
+    "last_seen": "2025-10-23",
+    "summary": "Reserved documentation-range address in a fictional scan alert.",
+    "tags": ["scanning", "network"]
+  },
+  {
+    "id": "IOC-2025-003",
+    "value": "192.0.2.77",
+    "type": "ip",
+    "risk": "Low",
+    "confidence": 51,
+    "category": "Unusual traffic",
+    "first_seen": "2025-10-22",
+    "last_seen": "2025-10-22",
+    "summary": "Reserved documentation-range address, included as a low-risk training record.",
+    "tags": ["training", "network"]
+  },
+  {
+    "id": "IOC-2025-004",
+    "value": "login-secure.example",
+    "type": "domain",
+    "risk": "High",
+    "confidence": 91,
+    "category": "Credential phishing",
+    "first_seen": "2025-10-17",
+    "last_seen": "2025-10-24",
+    "summary": "Fictional phishing hostname under the reserved .example domain.",
+    "tags": ["phishing", "brand impersonation"]
+  },
+  {
+    "id": "IOC-2025-005",
+    "value": "updates-check.example",
+    "type": "domain",
+    "risk": "Medium",
+    "confidence": 72,
+    "category": "Suspicious redirect",
+    "first_seen": "2025-10-19",
+    "last_seen": "2025-10-21",
+    "summary": "Fictional hostname under .example; no network request is made.",
+    "tags": ["redirect", "training"]
+  },
+  {
+    "id": "IOC-2025-006",
+    "value": "44d88612fea8a8f36de82e1278abb02f",
+    "type": "hash",
+    "risk": "High",
+    "confidence": 98,
+    "category": "Known test signature",
+    "first_seen": "2025-10-16",
+    "last_seen": "2025-10-24",
+    "summary": "EICAR antivirus test-file signature; this is a harmless test indicator, not malware.",
+    "tags": ["eicar", "test signature"]
+  },
+  {
+    "id": "IOC-2025-007",
+    "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "type": "hash",
+    "risk": "Low",
+    "confidence": 40,
+    "category": "Training sample",
+    "first_seen": "2025-10-22",
+    "last_seen": "2025-10-22",
+    "summary": "Synthetic digest for interface testing; not tied to a file.",
+    "tags": ["synthetic", "training"]
+  }
+]
