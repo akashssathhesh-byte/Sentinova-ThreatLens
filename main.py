@@ -83,8 +83,7 @@ def analyze_threat(text: str):
             if indicator in normalized_text:
                 detected.append(category)
                 break
-
-    # Simple heuristic score, not a probability
+                
     score = min(len(detected) * 25, 100)
 
     if score >= 75:
@@ -100,11 +99,6 @@ def analyze_threat(text: str):
         "detected_indicators": detected
     }
 
-
-# --------------------------------------------------
-# HOME ROUTE
-# --------------------------------------------------
-
 @app.get("/")
 async def home():
     return {
@@ -117,11 +111,6 @@ async def home():
         "health_check": "/health"
     }
 
-
-# --------------------------------------------------
-# HEALTH CHECK
-# --------------------------------------------------
-
 @app.get("/health")
 async def health():
     return {
@@ -130,11 +119,6 @@ async def health():
         "timestamp": datetime.now(timezone.utc).isoformat()
     }
 
-
-# --------------------------------------------------
-# API STATUS
-# --------------------------------------------------
-
 @app.get("/api/status")
 async def api_status():
     return {
@@ -142,11 +126,6 @@ async def api_status():
         "status": "online",
         "version": "1.0.0"
     }
-
-
-# --------------------------------------------------
-# THREAT ANALYSIS API
-# --------------------------------------------------
 
 @app.post("/api/analyze", response_model=ThreatResponse)
 async def threat_analysis(request: ThreatRequest):
@@ -179,7 +158,7 @@ async def application_info():
         "deployment": "Render",
         "status": "Active"
     }
-
+if __name__ == "__main__":
 import uvicorn
 
     uvicorn.run(
