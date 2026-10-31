@@ -158,8 +158,9 @@ async def application_info():
         "deployment": "Render",
         "status": "Active"
     }
+
 if __name__ == "__main__":
-import uvicorn
+    import uvicorn
 
     uvicorn.run(
         "main:app",
